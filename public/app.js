@@ -12,7 +12,8 @@ MapWrapper.prototype = {
       map: this.googleMap,
       animation: google.maps.Animation.DROP
     });
-    var contentString = "<div id='content'>" + "<p>Latitude:" + coords.lat + "</p><p>" + "Longitude:" + coords.lng + "</p></div>";
+
+    var contentString = "<div id='content'>" + "<p>Latitude:<strong>" + coords.lat.toFixed(2) + "</strong></p><p>" + "Longitude:" + coords.lng.toFixed(2) + "</p></div>";
 
     var infoWindow = new google.maps.InfoWindow({
       content: contentString
